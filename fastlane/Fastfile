@@ -21,7 +21,7 @@ platform :ios do
 
   before_all do
     # Ensure used Xcode version
-    xcversion(version: "14.2")
+    xcversion(version: "14.3.1")
   end
 
   #### Public ####
@@ -242,7 +242,7 @@ platform :ios do
     adhoc = options.fetch(:adhoc, false)
 
     # Extract git information to show within the app
-    git_branch_name = options[:git_tag]
+    git_branch_name = "develop"
     if git_branch_name.to_s.empty?
       # Retrieve the current git branch as a fallback
       git_branch_name = mx_git_branch
@@ -354,7 +354,7 @@ platform :ios do
       skip_certificate_verification: skip_certificate_verification,
       output_path: output_path,
       filename: ENV["MAIN_PROVISIONING_PROFILE_FILENAME"],
-      readonly: true,
+      readonly: false,
     )
     # Share extension
     get_provisioning_profile(
@@ -365,7 +365,7 @@ platform :ios do
       skip_certificate_verification: skip_certificate_verification,
       output_path: output_path,
       filename: ENV["SHARE_EXTENSION_PROVISIONING_PROFILE_FILENAME"],
-      readonly: true,
+      readonly: false,
     )
     # Siri Intents extension
     get_provisioning_profile(
@@ -376,7 +376,7 @@ platform :ios do
       skip_certificate_verification: skip_certificate_verification,
       output_path: output_path,
       filename: ENV["SIRI_INTENTS_EXTENSION_PROVISIONING_PROFILE_FILENAME"],
-      readonly: true,
+      readonly: false,
     )
     # NSE
     get_provisioning_profile(
@@ -387,7 +387,7 @@ platform :ios do
       skip_certificate_verification: skip_certificate_verification,
       output_path: output_path,
       filename: ENV["NSE_PROVISIONING_PROFILE_FILENAME"],
-      readonly: true,
+      readonly: false,
     )
     # Broadcast Upload Extension
     get_provisioning_profile(
@@ -398,7 +398,7 @@ platform :ios do
       skip_certificate_verification: skip_certificate_verification,
       output_path: output_path,
       filename: ENV["BROADCAST_UPLOAD_EXTENSION_PROVISIONING_PROFILE_FILENAME"],
-      readonly: true,
+      readonly: false,
     )
   end
 

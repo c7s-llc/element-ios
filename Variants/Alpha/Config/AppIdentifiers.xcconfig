@@ -16,14 +16,14 @@
 
 
 // App identity
-BUNDLE_DISPLAY_NAME = Element Alpha
-BASE_BUNDLE_IDENTIFIER = im.vector.app.alpha
-APPLICATION_GROUP_IDENTIFIER = group.im.vector.alpha
-APPLICATION_SCHEME = element
+BUNDLE_DISPLAY_NAME = upSpring Alpha
+BASE_BUNDLE_IDENTIFIER = abrchat.vector.app.alpha
+APPLICATION_GROUP_IDENTIFIER = group.abrchat.vector.alpha
+APPLICATION_SCHEME = upspring
 
 
 // Team
-DEVELOPMENT_TEAM = 7J4U792NQT
+DEVELOPMENT_TEAM = 4A79UQ5MFL
 
 
 // Provisioning profiles
